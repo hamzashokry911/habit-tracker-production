@@ -146,7 +146,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	late final _StringsEn _root = this; // ignore: unused_field
 
 	// Translations
-	String get habit_now_clone => 'Habit Now Clone';
+	String get habit_now_clone => 'Momentum Habits';
 	String get backups => 'backups';
 	String get lock_pin => 'Lock PIN';
 	String get rate_app => 'Rate this app';
@@ -176,7 +176,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get archived => 'Archived';
 	String get single_tasks => 'Single tasks';
 	String get recurring_tasks => 'Recurring tasks';
-	String get do_you_like_app => 'Do you like Habit Now Clone?';
+	String get do_you_like_app => 'Do you like Momentum Habits?';
 	String get not_really => 'not_really';
 	String get love_it => 'love it!';
 }
@@ -187,7 +187,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 extension on _StringsEn {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'habit_now_clone': return 'Habit Now Clone';
+			case 'habit_now_clone': return 'Momentum Habits';
 			case 'backups': return 'backups';
 			case 'lock_pin': return 'Lock PIN';
 			case 'rate_app': return 'Rate this app';
@@ -217,7 +217,7 @@ extension on _StringsEn {
 			case 'archived': return 'Archived';
 			case 'single_tasks': return 'Single tasks';
 			case 'recurring_tasks': return 'Recurring tasks';
-			case 'do_you_like_app': return 'Do you like Habit Now Clone?';
+			case 'do_you_like_app': return 'Do you like Momentum Habits?';
 			case 'not_really': return 'not_really';
 			case 'love_it': return 'love it!';
 			default: return null;
