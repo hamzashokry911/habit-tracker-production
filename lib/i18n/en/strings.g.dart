@@ -177,7 +177,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get single_tasks => 'Single tasks';
 	String get recurring_tasks => 'Recurring tasks';
 	String get do_you_like_app => 'Do you like Momentum Habits?';
-	String get not_really => 'not_really';
+	String get not_really => 'not really';
 	String get love_it => 'love it!';
 }
 
@@ -218,7 +218,7 @@ extension on _StringsEn {
 			case 'single_tasks': return 'Single tasks';
 			case 'recurring_tasks': return 'Recurring tasks';
 			case 'do_you_like_app': return 'Do you like Momentum Habits?';
-			case 'not_really': return 'not_really';
+			case 'not_really': return 'not really';
 			case 'love_it': return 'love it!';
 			default: return null;
 		}

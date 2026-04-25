@@ -2,7 +2,7 @@ name: habit_now_clone
 description: Momentum Habits Flutter prototype focused on UI scaffolding.
 
 environment:
-  sdk: ">=2.19.0 <3.0.0"
+  sdk: ">=3.3.0 <4.0.0"
 
 dependencies:
   animated_text_kit: ^4.2.2
