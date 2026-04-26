@@ -55,8 +55,8 @@ class AppTheme {
     );
   }
 
-  static TabBarTheme _tabBarTheme() {
-    return const TabBarTheme(
+  static TabBarThemeData _tabBarTheme() {
+    return const TabBarThemeData(
       unselectedLabelColor: AppColors.grey,
       labelPadding: EdgeInsets.symmetric(horizontal: Dimens.size12),
       indicator: UnderlineTabIndicator(
@@ -69,8 +69,8 @@ class AppTheme {
     );
   }
 
-  static BottomAppBarTheme _bottomAppBarTheme() {
-    return const BottomAppBarTheme(
+  static BottomAppBarThemeData _bottomAppBarTheme() {
+    return const BottomAppBarThemeData(
       color: AppColors.darkerGrey,
     );
   }
@@ -136,8 +136,8 @@ class AppTheme {
     );
   }
 
-  static DialogTheme _dialogTheme() {
-    return const DialogTheme(
+  static DialogThemeData _dialogTheme() {
+    return const DialogThemeData(
       backgroundColor: AppColors.darkerGrey,
       shape: AppShapes.circularBorder16,
       titleTextStyle: TextStyle(color: AppColors.grey),
