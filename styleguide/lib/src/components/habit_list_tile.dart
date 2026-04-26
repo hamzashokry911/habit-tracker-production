@@ -96,7 +96,7 @@ class HabitListTile extends StatelessWidget {
             width: Dimens.size32,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: Colors.green.withOpacity(0.2),
+              color: Colors.green.withValues(alpha: 0.2),
               border: Border.all(
                 width: 1.5,
                 color: Colors.green,
@@ -112,7 +112,7 @@ class HabitListTile extends StatelessWidget {
             width: Dimens.size32,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: Colors.orange.withOpacity(0.2),
+              color: Colors.orange.withValues(alpha: 0.2),
               border: Border.all(
                 width: 1.5,
                 color: Colors.orange,
