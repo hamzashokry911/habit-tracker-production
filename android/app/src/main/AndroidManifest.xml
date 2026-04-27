@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.habit_now_clone">
    <application
-        android:label="habit_now_clone"
+        android:label="Momentum Habits"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
