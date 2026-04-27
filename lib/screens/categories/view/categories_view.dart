@@ -57,7 +57,7 @@ class CategoriesView extends StatelessWidget {
         icon: const Icon(Icons.info_outline, color: AppColors.grey),
         onPressed: () => Fluttertoast.showToast(
           msg: t.tap_category_to_edit,
-          backgroundColor: AppColors.grey.withOpacity(0.2),
+          backgroundColor: AppColors.grey.withValues(alpha: 0.2),
           textColor: Colors.white,
           fontSize: Dimens.size16,
         ),
