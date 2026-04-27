@@ -24,7 +24,7 @@ const AppLocale _baseLocale = AppLocale.en;
 enum AppLocale with BaseAppLocale<AppLocale, _StringsEn> {
 	en(languageCode: 'en', build: _StringsEn.build);
 
-	const AppLocale({required this.languageCode, this.scriptCode, this.countryCode, required this.build}); // ignore: unused_element
+	const AppLocale({required this.languageCode, this.scriptCode, this.countryCode, required this.build}); // ignore: unused_element, avoid_unused_constructor_parameters
 
 	@override final String languageCode;
 	@override final String? scriptCode;
