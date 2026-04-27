@@ -7,7 +7,7 @@ void showMoreBottomSheet(BuildContext context) {
   showModalBottomSheet(
     context: context,
     shape: AppShapes.circularBorderTop16,
-    barrierColor: Colors.black.withOpacity(0.8),
+    barrierColor: Colors.black.withValues(alpha: 0.8),
     builder: (_) => Column(
       mainAxisSize: MainAxisSize.min,
       children: [

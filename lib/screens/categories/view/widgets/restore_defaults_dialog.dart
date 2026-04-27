@@ -43,7 +43,7 @@ class RestoreDefaultsDialog extends StatelessWidget {
                 ),
               ),
             ],
-          )
+          ),
         ],
       );
 }

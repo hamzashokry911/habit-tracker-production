@@ -41,7 +41,7 @@ class BottomAppBarIcon extends StatelessWidget {
                     .textTheme
                     .bodySmall!
                     .copyWith(color: _selectionColor(context)),
-              )
+              ),
             ],
           ),
         ),
