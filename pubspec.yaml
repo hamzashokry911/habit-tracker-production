@@ -27,6 +27,10 @@ dev_dependencies:
     sdk: flutter
   very_good_analysis: ^4.0.0+1
 
+dependency_overrides:
+  move_to_background:
+    path: third_party/move_to_background
+
 flutter:
   uses-material-design: true
 
