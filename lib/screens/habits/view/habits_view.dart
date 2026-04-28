@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:habit_now_clone/features/checkables/presentation/providers/checkables_provider.dart';
 import 'package:habit_now_clone/i18n/en/strings.g.dart';
-import 'package:habit_now_clone/utils/mocks/mock_habits.dart';
-import 'package:repository/repository.dart';
+import 'package:provider/provider.dart';
 import 'package:styleguide/components.dart';
 import 'package:styleguide/style.dart';
 
@@ -28,20 +28,20 @@ class HabitsView extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              _buildActiveHabitsList(),
-              _buildArchivedHabitsList(),
+              _buildActiveHabitsList(context),
+              _buildArchivedHabitsList(context),
             ],
           ),
         ),
       );
 
-  Widget _buildActiveHabitsList() => CheckableListView(
-        mockHabitsList.where((Habit habit) => !habit.archived).toList(),
+  Widget _buildActiveHabitsList(BuildContext context) => CheckableListView(
+        context.watch<CheckablesProvider>().activeHabits,
         mode: ScreenMode.habits,
       );
 
-  Widget _buildArchivedHabitsList() => CheckableListView(
-        mockHabitsList.where((Habit habit) => habit.archived).toList(),
+  Widget _buildArchivedHabitsList(BuildContext context) => CheckableListView(
+        context.watch<CheckablesProvider>().archivedHabits,
         mode: ScreenMode.habits,
       );
 }

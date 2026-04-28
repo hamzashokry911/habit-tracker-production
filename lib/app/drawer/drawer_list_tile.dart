@@ -20,7 +20,7 @@ class DrawerListTile extends StatelessWidget {
         horizontalTitleGap: 0,
         textColor: AppColors.grey,
         selectedColor: AppColors.orange,
-        selectedTileColor: AppColors.orange.withOpacity(0.2),
+        selectedTileColor: AppColors.orange.withValues(alpha: 0.2),
         style: ListTileStyle.drawer,
         shape: AppShapes.circularBorder04,
         dense: true,
