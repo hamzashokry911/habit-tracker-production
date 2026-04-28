@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:habit_now_clone/utils/mocks/mock_general.dart';
+import 'package:habit_now_clone/features/checkables/presentation/providers/checkables_provider.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import 'package:styleguide/components.dart';
 import 'package:styleguide/style.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -9,12 +10,12 @@ class TodayView extends StatelessWidget {
   const TodayView({super.key});
 
   @override
-  Widget build(BuildContext context) => const Column(
+  Widget build(BuildContext context) => Column(
         children: [
           TodayCalendarRow(),
           Expanded(
             child: CheckableListView(
-              mergedMockList,
+              context.watch<CheckablesProvider>().todayEntries,
               mode: ScreenMode.today,
             ),
           ),
