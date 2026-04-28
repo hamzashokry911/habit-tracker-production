@@ -9,8 +9,8 @@ class TodayView extends StatelessWidget {
   const TodayView({super.key});
 
   @override
-  Widget build(BuildContext context) => Column(
-        children: const [
+  Widget build(BuildContext context) => const Column(
+        children: [
           TodayCalendarRow(),
           Expanded(
             child: CheckableListView(

@@ -5,7 +5,7 @@ import 'package:habit_now_clone/screens/categories/view/widgets/category_section
 import 'package:habit_now_clone/screens/categories/view/widgets/restore_defaults_dialog.dart';
 import 'package:habit_now_clone/utils/mocks/mock_categories.dart';
 import 'package:styleguide/style.dart';
-import 'package:vrouter/vrouter.dart';
+import 'package:go_router/go_router.dart';
 
 class CategoriesView extends StatelessWidget {
   const CategoriesView({super.key});
@@ -22,7 +22,7 @@ class CategoriesView extends StatelessWidget {
               size: Dimens.size16,
               color: Theme.of(context).colorScheme.secondary,
             ),
-            onPressed: () => context.vRouter.historyBack(),
+            onPressed: () => context.pop(),
           ),
           title: Text(
             t.categories,
@@ -57,7 +57,7 @@ class CategoriesView extends StatelessWidget {
         icon: const Icon(Icons.info_outline, color: AppColors.grey),
         onPressed: () => Fluttertoast.showToast(
           msg: t.tap_category_to_edit,
-          backgroundColor: AppColors.grey.withOpacity(0.2),
+          backgroundColor: AppColors.grey.withValues(alpha: 0.2),
           textColor: Colors.white,
           fontSize: Dimens.size16,
         ),
