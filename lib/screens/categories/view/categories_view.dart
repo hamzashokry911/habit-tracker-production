@@ -5,7 +5,7 @@ import 'package:habit_now_clone/screens/categories/view/widgets/category_section
 import 'package:habit_now_clone/screens/categories/view/widgets/restore_defaults_dialog.dart';
 import 'package:habit_now_clone/utils/mocks/mock_categories.dart';
 import 'package:styleguide/style.dart';
-import 'package:vrouter/vrouter.dart';
+import 'package:go_router/go_router.dart';
 
 class CategoriesView extends StatelessWidget {
   const CategoriesView({super.key});
@@ -22,7 +22,7 @@ class CategoriesView extends StatelessWidget {
               size: Dimens.size16,
               color: Theme.of(context).colorScheme.secondary,
             ),
-            onPressed: () => context.vRouter.historyBack(),
+            onPressed: () => context.pop(),
           ),
           title: Text(
             t.categories,
