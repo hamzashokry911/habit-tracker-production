@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:repository/repository.dart';
@@ -75,7 +74,7 @@ class CheckableListTile extends StatelessWidget {
           CategoryIcon(
             icon: checkable.category.icon,
             color: checkable.category.color,
-          )
+          ),
         ],
       );
 
@@ -98,7 +97,7 @@ class CheckableListTile extends StatelessWidget {
         child: Row(
           children: [
             Text(
-              describeEnum(checkable.type),
+              checkable.type.name,
               style: Theme.of(context)
                   .textTheme
                   .bodySmall!

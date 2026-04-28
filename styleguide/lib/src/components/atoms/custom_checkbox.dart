@@ -49,13 +49,13 @@ class CustomCheckbox extends StatelessWidget {
   Color get _checkboxBackgroundColor {
     switch (progress) {
       case Progress.done:
-        return Colors.green.withOpacity(0.2);
+        return Colors.green.withValues(alpha: 0.2);
       case Progress.failed:
-        return Colors.red.withOpacity(0.2);
+        return Colors.red.withValues(alpha: 0.2);
       case Progress.late:
-        return Colors.orange.withOpacity(0.2);
+        return Colors.orange.withValues(alpha: 0.2);
       case Progress.neutral:
-        return Colors.grey.withOpacity(0.2);
+        return Colors.grey.withValues(alpha: 0.2);
     }
   }
 }
