@@ -21,8 +21,8 @@ class AppTheme {
         scaffoldBackgroundColor: AppColors.darkGrey,
         textTheme: AppTypography.darkTextTheme,
         canvasColor: AppColors.darkerGrey,
-        splashColor: AppColors.grey.withOpacity(0.1),
-        highlightColor: AppColors.grey.withOpacity(0.1),
+        splashColor: AppColors.grey.withValues(alpha: 0.1),
+        highlightColor: AppColors.grey.withValues(alpha: 0.1),
         appBarTheme: _appBarTheme(),
         bottomNavigationBarTheme: _bottomNavigationBarTheme(),
         tabBarTheme: _tabBarTheme(),
@@ -40,7 +40,7 @@ class AppTheme {
 
   static AppBarTheme _appBarTheme() {
     return const AppBarTheme(
-      color: AppColors.darkerGrey,
+      backgroundColor: AppColors.darkerGrey,
       actionsIconTheme: IconThemeData(color: AppColors.grey),
       iconTheme: IconThemeData(color: AppColors.orange),
     );
@@ -55,8 +55,8 @@ class AppTheme {
     );
   }
 
-  static TabBarTheme _tabBarTheme() {
-    return const TabBarTheme(
+  static TabBarThemeData _tabBarTheme() {
+    return const TabBarThemeData(
       unselectedLabelColor: AppColors.grey,
       labelPadding: EdgeInsets.symmetric(horizontal: Dimens.size12),
       indicator: UnderlineTabIndicator(
@@ -69,8 +69,8 @@ class AppTheme {
     );
   }
 
-  static BottomAppBarTheme _bottomAppBarTheme() {
-    return const BottomAppBarTheme(
+  static BottomAppBarThemeData _bottomAppBarTheme() {
+    return const BottomAppBarThemeData(
       color: AppColors.darkerGrey,
     );
   }
@@ -79,12 +79,12 @@ class AppTheme {
     return IconButtonThemeData(
       style: ButtonStyle(
         visualDensity: VisualDensity.compact,
-        foregroundColor: MaterialStateProperty.all<Color>(Colors.pink),
-        backgroundColor: MaterialStateProperty.all<Color>(AppColors.orange),
-        shape: MaterialStateProperty.all<OutlinedBorder>(
+        foregroundColor: WidgetStateProperty.all<Color>(Colors.pink),
+        backgroundColor: WidgetStateProperty.all<Color>(AppColors.orange),
+        shape: WidgetStateProperty.all<OutlinedBorder>(
           AppShapes.circularBorder12,
         ),
-        textStyle: MaterialStateProperty.all<TextStyle>(
+        textStyle: WidgetStateProperty.all<TextStyle>(
           AppTypography.varelaBold,
         ),
       ),
@@ -101,12 +101,12 @@ class AppTheme {
   static TextButtonThemeData _textButtonTheme() {
     return TextButtonThemeData(
       style: ButtonStyle(
-        foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+        foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        padding: MaterialStateProperty.all<EdgeInsets>(
+        padding: WidgetStateProperty.all<EdgeInsets>(
           const EdgeInsets.all(Dimens.size12),
         ),
-        textStyle: MaterialStateProperty.all<TextStyle>(
+        textStyle: WidgetStateProperty.all<TextStyle>(
           AppTypography.varelaBold,
         ),
       ),
@@ -116,14 +116,14 @@ class AppTheme {
   static ElevatedButtonThemeData _elevatedButtonTheme() {
     return ElevatedButtonThemeData(
       style: ButtonStyle(
-        foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-        backgroundColor: MaterialStateProperty.all<Color>(AppColors.orange),
+        foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
+        backgroundColor: WidgetStateProperty.all<Color>(AppColors.orange),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.zero),
-        shape: MaterialStateProperty.all<OutlinedBorder>(
+        padding: WidgetStateProperty.all<EdgeInsets>(EdgeInsets.zero),
+        shape: WidgetStateProperty.all<OutlinedBorder>(
           AppShapes.circularBorder12,
         ),
-        textStyle: MaterialStateProperty.all<TextStyle>(
+        textStyle: WidgetStateProperty.all<TextStyle>(
           AppTypography.varelaBold,
         ),
       ),
@@ -136,8 +136,8 @@ class AppTheme {
     );
   }
 
-  static DialogTheme _dialogTheme() {
-    return const DialogTheme(
+  static DialogThemeData _dialogTheme() {
+    return const DialogThemeData(
       backgroundColor: AppColors.darkerGrey,
       shape: AppShapes.circularBorder16,
       titleTextStyle: TextStyle(color: AppColors.grey),

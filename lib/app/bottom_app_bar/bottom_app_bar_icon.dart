@@ -4,7 +4,7 @@ import 'package:habit_now_clone/providers/navigation_provider.dart';
 import 'package:habit_now_clone/utils/navigation.dart';
 import 'package:provider/provider.dart';
 import 'package:styleguide/style.dart';
-import 'package:vrouter/vrouter.dart';
+import 'package:go_router/go_router.dart';
 
 class BottomAppBarIcon extends StatelessWidget {
   const BottomAppBarIcon({
@@ -41,7 +41,7 @@ class BottomAppBarIcon extends StatelessWidget {
                     .textTheme
                     .bodySmall!
                     .copyWith(color: _selectionColor(context)),
-              )
+              ),
             ],
           ),
         ),
@@ -51,13 +51,13 @@ class BottomAppBarIcon extends StatelessWidget {
 
   void _onBarIconTap(BuildContext context) {
     if (index == 0) {
-      context.vRouter.to(Paths.today);
+      context.go(Paths.today);
     } else if (index == 1) {
-      context.vRouter.to(Paths.habits);
+      context.go(Paths.habits);
     } else if (index == 2) {
-      context.vRouter.to(Paths.tasks);
+      context.go(Paths.tasks);
     } else if (index == 3) {
-      context.vRouter.to(Paths.categories);
+      context.push(Paths.categories);
     }
     context.read<NavigationProvider>().updateTab(index);
   }

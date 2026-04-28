@@ -1,3 +1,3 @@
 abstract class Constants {
-  static const String appTitle = 'habit now clone';
+  static const String appTitle = 'Momentum Habits';
 }

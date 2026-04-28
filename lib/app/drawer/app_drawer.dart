@@ -6,7 +6,7 @@ import 'package:habit_now_clone/app/drawer/title_and_date_section.dart';
 import 'package:habit_now_clone/i18n/en/strings.g.dart';
 import 'package:habit_now_clone/utils/navigation.dart';
 import 'package:styleguide/style.dart';
-import 'package:vrouter/vrouter.dart';
+import 'package:go_router/go_router.dart';
 
 const double _kDrawerWidth = 264;
 
@@ -32,7 +32,7 @@ class CustomAppDrawer extends StatelessWidget {
             icon: FontAwesomeIcons.tableCellsLarge,
             onTap: () {
               Navigator.of(context).pop();
-              context.vRouter.to(Paths.categories);
+              context.push(Paths.categories);
             },
           ),
           AppSpaces.gap24,
