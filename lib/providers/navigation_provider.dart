@@ -7,7 +7,6 @@ class NavigationProvider with ChangeNotifier {
   int get currentIndex => _currentIndex;
 
   void updateTab(int index) {
-    if (index == 3) return;
     _currentIndex = index;
     notifyListeners();
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:habit_now_clone/features/checkables/presentation/providers/checkables_provider.dart';
 import 'package:habit_now_clone/i18n/en/strings.g.dart';
-import 'package:habit_now_clone/utils/mocks/mock_tasks.dart';
-import 'package:repository/repository.dart';
+import 'package:provider/provider.dart';
 import 'package:styleguide/components.dart';
 import 'package:styleguide/style.dart';
 
@@ -33,21 +33,21 @@ class TasksView extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            _buildSingleTasksList(),
-            _buildRecurringTasksList(),
+            _buildSingleTasksList(context),
+            _buildRecurringTasksList(context),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildSingleTasksList() => CheckableListView(
-        mockTasksList.where((Task task) => !task.recurring).toList(),
+  Widget _buildSingleTasksList(BuildContext context) => CheckableListView(
+        context.watch<CheckablesProvider>().singleTasks,
         mode: ScreenMode.tasks,
       );
 
-  Widget _buildRecurringTasksList() => CheckableListView(
-        mockTasksList.where((Task task) => task.recurring).toList(),
+  Widget _buildRecurringTasksList(BuildContext context) => CheckableListView(
+        context.watch<CheckablesProvider>().recurringTasks,
         mode: ScreenMode.tasks,
       );
 }
