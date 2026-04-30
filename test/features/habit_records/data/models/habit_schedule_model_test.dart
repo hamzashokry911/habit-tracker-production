@@ -12,7 +12,7 @@ void main() {
         intervalDays: null,
         daysOfWeek: <int>[1, 3, 5],
         daysOfMonth: null,
-        startDate: const DateTime(2026, 4, 28),
+        startDate: DateTime(2026, 4, 28),
       );
 
       final Map<String, Object?> map = model.toMap();
@@ -33,7 +33,7 @@ void main() {
         intervalDays: 2,
         daysOfWeek: null,
         daysOfMonth: null,
-        startDate: const DateTime(2026, 1, 1),
+        startDate: DateTime(2026, 1, 1),
       );
 
       final HabitScheduleModel model = HabitScheduleModel.fromEntity(entity);
